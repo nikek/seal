@@ -6,6 +6,11 @@
 function AppCtrl($scope, socket) {
   socket.on('send:name', function (data) {
     $scope.name = data.name;
+    $scope.teams = [
+    	{name:'St. Petersburg National Research University of IT, Mechanics and Optics', mode:1}, 
+    	{name:'Royal Institute of Technology Sweden', mode:1},
+    	{name:'Saratow state university', mode:'tweet'}
+    	];
   });
 }
 

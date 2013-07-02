@@ -24,7 +24,9 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.static(__dirname + '/public'));
-  app.use(app.router);
+  app.use(express.static(__dirname + '/views'));
+  app.use(express.static(__dirname + '/views/partials'));
+  app.use(app.router); 
 });
 
 app.configure('development', function(){

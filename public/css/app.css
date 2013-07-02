@@ -1,3 +1,92 @@
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,800);*/
+body {
+  margin:0px; 
+  padding:0px;
+  line-height:20px;
+  background: url(images/background-dots2.jpg) center center;
+  border-top: 10px solid #e1e1e1;
+
+  font: normal 1.1em 'Open Sans', Helvetica, Arial, 'Lucida Grande', Verdana, sans-serif;
+  font-weight: 300;
+  line-height: 1.6em;
+  background: #fff  fixed center no-repeat;
+  letter-spacing: 0px;
+  color: #999;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, Arial, sans-serif;
+
+  padding:0px;
+  margin:0px;
+  font-weight: 100;
+  color: #58bd9f;
+  }
+
+p {
+  padding:2em 1em 2em 1em;
+  margin:0px;
+  text-align: justify;
+  }
+  
+a {
+  color: #3EB3F9;
+  }
+a:hover {
+  color: #0684C8;
+  }
+a:visited {
+  color: #928FBE;
+  }
+
+/*____PAGE LAYOUT____*/
+#container {
+  margin: 0px auto;
+  padding:2em 0 0 0; 
+  max-width:1000px;
+  }
+
+/* Main navigation row _____________________ */
+nav#main-nav 
+{
+
+}
+
+/* Feed listing _____________________ */
+
+/* Every row container */
+.feed-row
+{
+  margin: 0.3em 0;
+  padding: 0.3em 0.6em;
+  background-color: #e1e1e1;
+  color: #999;
+}
+.grey-font
+{
+  color:#cc9;
+}
+.problem-set
+{
+  color: green;
+}
+.font-time
+{
+  color:orange;
+}
+footer 
+{
+  margin: 0.3em 0;
+  padding: 0.3em 0.6em;
+}
+
+
+
+/* Included from start *7
+
 /* app css stylesheet */
 
 .menu {
