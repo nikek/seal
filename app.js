@@ -4,8 +4,10 @@
  */
 
 var express = require('express'),
+  ejs = require('ejs'),
   routes = require('./routes'),
-  socket = require('./routes/socket.js');
+  socketClient = require('./libs/socket-client.js'),
+  scoreboard = require('./libs/scoreboard.js');
 
 var app = module.exports = express();
 var server = require('http').createServer(app);
@@ -13,11 +15,12 @@ var server = require('http').createServer(app);
 // Hook Socket.io into Express
 var io = require('socket.io').listen(server);
 
+
 // Configuration
 
 app.configure(function(){
   app.set('views', __dirname + '/views');
-  app.set('view engine', 'jade');
+  app.engine('html', require('ejs').renderFile);
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.static(__dirname + '/public'));
@@ -42,8 +45,9 @@ app.get('*', routes.index);
 
 // Socket.io Communication
 
-io.sockets.on('connection', socket);
+io.sockets.on('connection', socketClient.add);
 
+// Setup Scoreboard
 
 
 // Start server
